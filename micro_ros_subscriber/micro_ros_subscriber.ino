@@ -27,17 +27,17 @@ void subscription_callback(const void * msgin)
   // M5.Lcd.printf("micro ROS2 Data:%d \n",msg.data);
 
   if (msg.data == 0){
-    M5.Lcd.drawJpgFile(SD, "/img/green_status.jpg");  
+    M5.Lcd.print("0\n");  
   }
   else if (msg.data == 1){
-    M5.Lcd.drawJpgFile(SD, "/img/yellow_status.jpg");
+    M5.Lcd.print("1\n");
   }
   else if (msg.data == 2){
-    M5.Lcd.drawJpgFile(SD, "/img/blue_status.jpg");
+    M5.Lcd.print("2\n");
   }
 
   else if (msg.data == 3){
-    M5.Lcd.drawJpgFile(SD, "/img/red_status.jpg");
+    M5.Lcd.print("3\n");
   }
 
 }
